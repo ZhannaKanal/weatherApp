@@ -89,16 +89,19 @@ body{
 }
 .weather-box.active .box,
 .not-found.active .box {
+    /* without this code page has not img */
     transform: translateY(0%);
     transition: transform 1s ease;
     transition-delay: .1s;
 }
 .weather-box .box .info-weather {
+    /* between result have 2 images */
     transform: translateY(-120%);
 }
 .container.active .weather-box .box .info-weather,
 .container.active .weather-details .humidity .info-humidity,
-.container.active .weather-details .wind .info-wind{
+.container.active .weather-details .wind .info-wind{ 
+/* after result */
     transform: translateY(0%);
     transition: transform 1s ease;
 }
@@ -106,6 +109,7 @@ body{
     text-align: center;
     margin: 0px 0;
 }
+
 .weather-box img{
     width: 90%;
 }
@@ -157,7 +161,7 @@ body{
     padding-left: 20px;
     justify-content: flex-start;
 }
-weather-details .wind{
+.weather-details .wind{
     padding-right: 20px;
     justify-content: flex-end;
 }
